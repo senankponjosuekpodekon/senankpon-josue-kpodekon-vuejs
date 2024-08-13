@@ -21,7 +21,7 @@ const router = createRouter({
       path: '/todo',
       name: 'todo',
       component: HomePage,
-      //meta: { requiresAuth: true },
+      meta: { requiresAuth: true },
     },
     {
       path: '/about',
@@ -52,6 +52,7 @@ const router = createRouter({
       path: '/',
       name: 'landing',
       component: LandingView,
+      meta: { requiresAuth: false },
     }
   ]
 });
@@ -61,13 +62,18 @@ router.beforeEach((to, from, next) => {
 
   if (to.meta.requiresAuth && !authStore.user) {
     next({ name: 'signup' });
-  } else if (to.meta.requiresGuest && authStore.user) {
+  } 
+  else if (to.meta.requiresGuest && authStore.user) {
     next({ name: 'home' });
-  // } else if (!to.meta.requiresAuth && authStore.user) {
-  //   next({ name: 'home' });
-  } else {
+  } 
+  else if (!to.meta.requiresAuth && authStore.user && to.name !== 'landing') {
+    next({ name: 'landing' });
+  } 
+  else {
     next();
   }
 });
+
+
 
 export default router

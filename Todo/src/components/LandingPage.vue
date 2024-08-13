@@ -80,11 +80,11 @@ export default {
                   </a>
                 </li>
 
-                <div class="text-gray-500 order-3 w-full md:w-auto md:order-2" id="dashn">
+                <!-- <div class="text-gray-500 order-3 w-full md:w-auto md:order-2" id="dashn">
                   <ul class="flex font-semibold justify-between cursor-pointer" v-if="authStore.user">
-                    <li class="md:px-4 md:py-2 bg-green-500 text-white rounded-xl"><a @click="dashBoard">Dashboard</a></li>
+                    <li class="md:px-4 md:py-2 bg-green-500 text-white rounded-xl text-center"><a @click="dashBoard">Dashboard</a></li>
                   </ul>
-                 </div>
+                 </div> -->
               </ul>
               <div>
                 <p class="mb-4 text-center text-base font-medium text-white">
