@@ -4,6 +4,7 @@ import LoginView from '@/views/LoginView.vue'
 import SignupView from '@/views/SignupView.vue'
 import EnteteView from '@/views/EnteteView.vue'
 import HomePage from '@/views/HomePage.vue'
+import LandingView from '@/views/LandingView.vue'
 import { useAuthStore } from '@/stores/auth'
 
 
@@ -46,6 +47,11 @@ const router = createRouter({
       path: '/navbar',
       name: 'navbar',
       component: EnteteView,
+    },
+    {
+      path: '/',
+      name: 'landing',
+      component: LandingView,
     }
   ]
 });

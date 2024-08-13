@@ -8,7 +8,7 @@
 
       <!-- navigation -->
       <div class="text-gray-500 order-3 w-full md:w-auto md:order-2" id="dashn">
-        <ul class="flex font-semibold justify-between cursor-pointer">
+        <ul class="flex font-semibold justify-between cursor-pointer" v-if="authStore.user">
           <li class="md:px-4 md:py-2 text-indigo-500"><a @click="dashBoard">Dashboard</a></li>
         </ul>
       </div>

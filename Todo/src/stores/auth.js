@@ -19,9 +19,6 @@ export const useAuthStore = defineStore('auth', {
         usersDatabase[email] = { name, password };
         setUsersDatabase(usersDatabase);
 
-        // Simuler la génération d'un token
-        //const simulatedToken = 'simulatedToken12345';
-
         const theToken = Math.random().toString(36);
 
         this.user = { name, email };
@@ -42,8 +39,6 @@ export const useAuthStore = defineStore('auth', {
           throw new Error('Invalid email or password');
         }
 
-        // Simulation la génération d'un token
-        //const simulatedToken = 'simulatedToken12345';
 
         const theToken = Math.random().toString(36);
         this.user = { name: user.name, email };
