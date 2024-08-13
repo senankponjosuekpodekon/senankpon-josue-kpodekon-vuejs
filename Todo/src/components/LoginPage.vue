@@ -74,7 +74,7 @@ export default {
     const email = ref('');
     const password = ref('');
 
-    const navigateToLogin = async () => {
+    const navigateToLogin = () => {
       authStore.login(email.value, password.value);
       if (!authStore.errorMessage) {
          router.push('/home');

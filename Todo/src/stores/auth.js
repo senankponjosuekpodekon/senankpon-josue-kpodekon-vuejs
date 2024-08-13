@@ -26,7 +26,6 @@ export const useAuthStore = defineStore('auth', {
 
         this.user = { name, email };
         this.token = theToken;
-        this.user.token = { name, password, theToken }
         localStorage.setItem('authToken', this.token);
         localStorage.setItem('currentUser', JSON.stringify(this.user));
         this.errorMessage = null;
@@ -46,12 +45,12 @@ export const useAuthStore = defineStore('auth', {
         // Simulation la génération d'un token
         //const simulatedToken = 'simulatedToken12345';
 
-        //const theToken = Math.random().toString(36);
-        //this.user = { name: user.name, email };
-        //this.token = theToken;
-        //localStorage.setItem('authToken', this.token);
-        //localStorage.setItem('currentUser', JSON.stringify(this.user));
-        //this.errorMessage = null;
+        const theToken = Math.random().toString(36);
+        this.user = { name: user.name, email };
+        this.token = theToken;
+        localStorage.setItem('authToken', this.token);
+        localStorage.setItem('currentUser', JSON.stringify(this.user));
+        this.errorMessage = null;
       } catch (error) {
         console.error('Error during login:', error);
         this.errorMessage = error.message || 'Login failed. Please try again.';

@@ -72,7 +72,7 @@ export default {
     const password = ref('');
 
     const validateForm = () => {
-      if (!name.value) {
+      if (!name.value || !/^[A-Za-z][A-Za-z0-9_]{5,10}$/.test(name.value)) {
         authStore.errorMessage = 'Name is required.';
         return false;
       }
