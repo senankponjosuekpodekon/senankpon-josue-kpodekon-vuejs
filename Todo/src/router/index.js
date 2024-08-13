@@ -63,8 +63,8 @@ router.beforeEach((to, from, next) => {
     next({ name: 'signup' });
   } else if (to.meta.requiresGuest && authStore.user) {
     next({ name: 'home' });
-  } else if (!to.meta.requiresAuth && authStore.user) {
-    next({ name: 'home' });
+  // } else if (!to.meta.requiresAuth && authStore.user) {
+  //   next({ name: 'home' });
   } else {
     next();
   }

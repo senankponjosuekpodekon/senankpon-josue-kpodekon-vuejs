@@ -13,7 +13,7 @@
           <h2
             class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-4xl"
           >
-            TODO-CRUD
+            Welcome Dear TaskStian, 
           </h2>
         </nav>
 
@@ -56,6 +56,7 @@ import { ref, computed, onMounted } from 'vue'
 import DataTable from '@/components/DataTable.vue'
 import BaseModel from '@/components/BaseModal.vue'
 import TodoForm from '@/components/TodoForm.vue'
+//import { useAuthStore } from '@/stores/auth'
 
 import { useTodoStore } from '@/stores/todo'
 
@@ -63,6 +64,7 @@ const modalActive = ref(null)
 const todoId = ref(null)
 
 const tasksStore = useTodoStore()
+
 
 const columns = computed(() => tasksStore.getTodoColumns)
 

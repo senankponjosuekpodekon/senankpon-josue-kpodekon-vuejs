@@ -1,10 +1,10 @@
 <template>
-  <div class="font-[sans-serif] bg-white max-w-4xl flex items-center mx-auto md:h-screen p-4">
+  <div class="font-[sans-serif] max-w-4xl flex items-center mx-auto md:h-screen p-4">
     <div class="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl overflow-hidden">
       <div class="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4">
         <div>
           <h4 class="text-white text-lg font-semibold">Create Your Account</h4>
-          <p class="text-[13px] text-gray-300 mt-3 leading-relaxed">Welcome to our registration page! Get started by creating your account.</p>
+          <p class="text-[13px] text-gray-300 mt-3 leading-relaxed">Welcome to our TaskStia page! Get started by creating your account.</p>
         </div>
         <div>
           <h4 class="text-white text-lg font-semibold">Simple & Secure Registration</h4>
@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <form @submit.prevent="navigateToSignup" class="md:col-span-2 w-full py-6 px-6 sm:px-16">
+      <form @submit.prevent="navigateToSignup" class="md:col-span-2 w-full py-6 px-6 sm:px-16 bg-white">
         <div class="mb-6">
           <h3 class="text-gray-800 text-2xl font-bold">Create an account</h3>
         </div>
