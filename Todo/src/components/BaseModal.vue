@@ -5,7 +5,7 @@
       tabindex="-1"
       aria-hidden="true"
       v-if="modalActive"
-      class="max-h-fulloverflow-y-auto fixed fixed left-0 left-0 right-0 right-0 top-0 top-0 z-50 z-50 flex h-[calc(100%-1rem)] h-[calc(100%-1rem)] max-h-full w-full w-full items-center items-center justify-center justify-center overflow-y-auto overflow-x-hidden overflow-x-hidden md:inset-0 md:inset-0"
+      class="max-h-fulloverflow-y-auto fixed left-0 right-0 top-0 z-50 flex h-[calc(100%-1rem)]  max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
     >
       <div class="relative max-h-full w-full max-w-2xl p-4">
         <!-- Modal content -->
@@ -65,4 +65,4 @@ defineProps({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
